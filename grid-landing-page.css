@@ -1,0 +1,256 @@
+body {
+    background-color: hsl(228, 99%, 58%);
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.nav {
+    display: flex;
+    flex: 0 0 40px;
+    justify-content: space-between;
+    border-bottom: 1px solid #fffbfb59;
+}
+
+.dropdown {
+    position: relative;
+    right: 10px;
+    direction: rtl;
+    padding: 10px 20px;
+}
+
+.dropdown-checkbox {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    z-index: 1000;
+    background-color: hsl(228, 99%, 58%);
+    border-radius: 10px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 350px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+}
+
+
+
+.dropdown-content a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: white;
+    display: block;
+
+}
+
+.dropdown-checkbox:checked~.dropdown-content {
+    display: flex;
+}
+
+.bridge ul li {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+li::marker {
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    border-bottom: 1px solid #fffbfb59;
+
+}
+
+.left {
+    flex: 0 0 57%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: #ffffff;
+    line-height: 1.2;
+
+}
+
+.side-container {
+    flex: 0 0 38%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-left: 1px solid #fffbfb59;
+}
+
+h1 {
+
+    font-family: 'Inter', sans-serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 450px;
+    color: white;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+p {
+    font-weight: 600;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 30px;
+    background-color: #0051ff;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover {
+    opacity: 0.50;
+}
+
+.icon {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 1.5rem;
+}
+
+.num {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 3rem;
+    font-weight: 700;
+    justify-self: end;
+
+}
+
+.content {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-top: 20px;
+}
+
+.top-left {
+    border-bottom: 1px solid #fffbfb59;
+    border-right: 1px solid #fffbfb59;
+}
+
+.top-right {
+    border-left: 1px solid #fffbfb59;
+    border-bottom: 1px solid #fffbfb59;
+}
+
+.bottom-left {
+    border-right: 1px solid #fffbfb59;
+    border-top: 1px solid #fffbfb59;
+}
+
+.bottom-right {
+    border-top: 1px solid #fffbfb59;
+    border-left: 1px solid #fffbfb59;
+}
+
+footer {
+    display: flex;
+    flex: 0 0 30px;
+    justify-content: space-between;
+    border-bottom: 1px solid #fffbfb59;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        flex: 100%;
+    }
+
+    .side-container {
+        flex: 100%;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .box {
+          grid-column: 1/3;
+    }
+
+    .top-left {
+        border-top: 1px solid #fffbfb59;
+    }
+
+    .top-right {
+        border-top: 1px solid #fffbfb59;
+    }
+
+    .bottom-right {
+        border-bottom: 1px solid #fffbfb59;
+    }
+
+    .bottom-left {
+        border-bottom: 1px solid #fffbfb59;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+
+    footer {
+        border-bottom: 1px solid #fffbfb59;
+        display: block;
+    }
+}
